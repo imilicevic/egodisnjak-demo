@@ -1,7 +1,10 @@
 body{
-  background: #fafafa !important;
-  margin: 0;
-  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 700;
 }
 
 h1, h2, h3{
@@ -9,15 +12,168 @@ h1, h2, h3{
 }
 
 .navbar{
-  border-radius: 0 !important;
-  background: #fff !important; 
+  border-radius: 0;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{
+  color: #fafafa;
+}
+
+.searchbox{
+  background: transparent;
+  border: 1px solid #fafafa;
+  border-radius: 0;
+}
+
+.hero{
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+.inner{
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1000;
+}
+
+.overlay{
+  position: relative;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+  font-size: 36px;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+    -webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%);  
+}
+
+.hero-title{
+  padding: 0px 50px;
+  border: 3px solid #fafafa;
+  display: inline-block;
+  color: #fafafa;
+}
+
+.hero-title h1{
+  margin-top: 10px;
+}
+
+.scroll{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.scroll span.glyphicon{
+  font-size: 36px;
+  color: #fafafa;
+  cursor: pointer;
+}
+.scroll:hover span.glyphicon{
+  top: -5px;
 }
 
 .teams{
-  margin-top: 30px;
+  padding: 50px 0;
 }
-.card{
-  background: #fff;
-  padding: 5px 25px 25px;
-  box-shadow: 0px 0px 15px -10px #777;
+
+.team-item{
+  text-align: center;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.hidden-info{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 100;
+  left: 0;
+}
+
+.team-item:hover .hidden-info{
+  background: rgba(85, 125, 149, 0.8);
+  display: block;
+}
+
+.team-item:nth-child(odd) .hidden-info{
+  background: rgba(214, 126, 65, 0.8);
+}
+
+.valign-bottom{
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
+  color: #fff;
+  text-align: left;
+}
+
+.valign-bottom h3{
+  text-align: left;
+}
+
+.hidden-info h3{
+  margin-bottom: 0;
+}
+.team-name{
+  font-size: 20px;
+}
+
+.team-hero h1{
+  text-transform: uppercase;
+}
+
+.team-hero .team-description{
+  max-width: 70%;
+  margin: 20px auto 0;
+  font-size: 20px;
+}
+
+.team-desc{
+  background: rgba(214, 126, 65, 0.8);
+  color: #fff;
+  height: 360px
+}
+
+#profileModal{
+  
+}
+
+#profileModal .profile-picture{
+  float: left; width: 60%;
+}
+
+#profileModal .profile-details{
+  float: left; 
+  width: 40%;
+  padding: 15px;
+  color: #fff;
+}
+
+#profileModal .modal-content{
+  background: rgba(85, 125, 149, 0.8);
+  border-radius: 0;
+}
+
+#profileModal .member-info{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#profileModal .member-contact{
+  margin-top: 50px;
+  font-size: 20px;
+
+}
+
+#profileModal p{
+  font-size: 16px;
 }

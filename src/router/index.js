@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import Years from '@/components/Years'
+
+import Teams from '@/components/Teams'
+import Members from '@/components/Members'
+import Member from '@/components/Member'
 
 Vue.use(Router)
 
@@ -10,12 +12,22 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      redirect: '2016'
     },
     {
-      path: '/years',
-      name: 'Years',
-      component: Years
-    }
+      path: '/:year([0-9]{4})/:team([a-zA-Z]+)',
+      name: 'Members',
+      component: Members
+    },
+    {
+      path: '/:year([0-9]{4})',
+      name: 'Teams',
+      component: Teams
+    },
+    {
+      path: '/:profileId([0-9]{4})',
+      name: 'Member',
+      component: Member
+    },    
   ]
 })
